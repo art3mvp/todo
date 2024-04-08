@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="add_new_note_button">add new note button</string>
+    <string name="enter_note">Enter note...</string>
+    <string name="high">High</string>
+    <string name="middle">Middle</string>
+    <string name="low">Low</string>
+</resources>

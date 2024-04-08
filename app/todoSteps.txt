@@ -1,0 +1,28 @@
+with mvvm stucture
+
+MainActivity
+mainLayout -> recyclerView + button
+MainViewModel
+
+AddNoteActivity
+AddNotelayout -> radioButtons + save + input
+AddNoteViewModel
+
+NotesDB
+
+NotesDao
+
+Notes
+
+NotesAdapter
+
+Room dependencies for Database - ok
+
+To include:
+-Recycler view
+-LiveData
+-MutableLiveData
+-ViewModelProvider
+-Singleton
+-Swipe delete
+-Autogen and ignore
