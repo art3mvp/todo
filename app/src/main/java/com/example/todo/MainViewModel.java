@@ -22,12 +22,7 @@ public class MainViewModel extends AndroidViewModel {
     }
 
     public void removeNote(Note note) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                notesDao.remove(note.getId());
-            }
-        });
+        Thread thread = new Thread(() -> notesDao.remove(note.getId()));
         thread.start();
     }
 }

@@ -41,21 +41,16 @@ public class AddNoteActivity extends AppCompatActivity {
 
         addNoteViewModel = new ViewModelProvider(this).get(AddNoteViewModel.class);
 
-        addNoteViewModel.getShouldCloseScreen().observe(this, new Observer<Boolean>() {
-            @Override
-            public void onChanged(Boolean shouldClose) {
-                if (shouldClose) {
+        addNoteViewModel.getShouldCloseScreen().observe(
+                this,
+                shouldClose ->
+                {
+                    if (shouldClose) {
                     finish();
-                }
             }
         });
-
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveNote();
-            }
-        });
+        initViews();
+        saveButton.setOnClickListener(v -> saveNote());
     }
 
     private void saveNote() {

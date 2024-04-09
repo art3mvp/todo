@@ -15,14 +15,12 @@ import java.util.List;
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHolder> {
 
     private List<Note> notes = new ArrayList<>();
-
-
     public List<Note> getNotes() {
         return notes;
     }
-
     public void setNotes(List<Note> notes) {
         this.notes = notes;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -55,8 +53,6 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
 
         int color = ContextCompat.getColor(holder.textViewNote.getContext(), colorResId);
         holder.textViewNote.setBackgroundColor(color);
-
-
     }
 
     @Override

@@ -17,7 +17,8 @@
         android:layout_margin="16dp"
         android:hint="@string/enter_note"
         android:padding="16dp"
-        android:autofillHints="" />
+        android:autofillHints=""
+        android:inputType="text" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -71,6 +72,7 @@
         android:text="@string/save_note"
         android:backgroundTint="@android:color/holo_blue_light"
         android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:cornerRadius="0dp"
         android:layout_margin="16dp"
