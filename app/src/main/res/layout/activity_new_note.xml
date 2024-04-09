@@ -31,41 +31,50 @@
             android:id="@+id/radioLowButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/low"
-            android:padding="8dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:background="@android:color/holo_green_light"
-            android:textSize="20sp" />
+            android:checked="true"
+            android:padding="8dp"
+            android:text="@string/low"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:useMaterialThemeColors="false" />
 
         <RadioButton
             android:id="@+id/radioMiddleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/middle"
-            android:padding="8dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:background="@android:color/holo_orange_light"
-            android:textSize="20sp" />
+            android:padding="8dp"
+            android:text="@string/middle"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radioHighButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/high"
-            android:padding="8dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:background="@android:color/holo_red_light"
-            android:textSize="20sp" />
+            android:padding="8dp"
+            android:text="@string/high"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:useMaterialThemeColors="false" />
     </RadioGroup>
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="@string/save_note"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        android:layout_margin="16dp"
+        android:padding="12dp" />
 
 
 </LinearLayout>

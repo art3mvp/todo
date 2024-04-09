@@ -1,18 +1,18 @@
 with mvvm stucture
 
-MainActivity
-mainLayout -> recyclerView + button
+MainActivity - ok
+mainLayout -> recyclerView + button = 0k
 MainViewModel
 
-AddNoteActivity
-AddNotelayout -> radioButtons + save + input
+AddNoteActivity = ok
+AddNotelayout -> radioButtons + save + input = ok
 AddNoteViewModel
 
-NotesDB
+NotesDB - ok
 
 NotesDao
 
-Notes
+Notes = ok
 
 NotesAdapter
 
@@ -23,6 +23,6 @@ To include:
 -LiveData
 -MutableLiveData
 -ViewModelProvider
--Singleton
+-Singleton - ok
 -Swipe delete
 -Autogen and ignore
