@@ -2,16 +2,21 @@ package com.example.todo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +41,12 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         notesAdapter = new NotesAdapter();
 
-        viewModel.getNotes().observe(this, notes -> notesAdapter.setNotes(notes));
+        viewModel.getNotes().observe(this, new Observer<List<Note>>() {
+            @Override
+            public void onChanged(List<Note> notes) {
+                notesAdapter.setNotes(notes);
+            }
+        });
 
         recyclerView.setAdapter(notesAdapter);
 
@@ -63,10 +73,20 @@ public class MainActivity extends AppCompatActivity {
                 });
         itemTouchHelper.attachToRecyclerView(recyclerView);
 
-        addNoteButton.setOnClickListener(v -> {
-            Intent intent = AddNoteActivity.newIntent(MainActivity.this);
-                startActivity(intent);
+        addNoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = AddNoteActivity.newIntent(MainActivity.this);
+                MainActivity.this.startActivity(intent);
+            }
         });
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        viewModel.refreshList();
     }
 
     private void initViews() {
