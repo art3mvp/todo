@@ -1,15 +1,24 @@
-Use of rxJava, glide, retrofit, gson.
+# To-Do List
 
-api: https://dog.ceo/api/breeds/image/random
+To-Do List is a simple and efficient task management application designed to help you organize and track your daily activities. Built using Java, RxJava3, and Room, this app provides a seamless experience for creating, updating, and deleting tasks.
 
-implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+## Features
 
-implementation 'com.github.bumptech.glide:glide:4.16.0'
+- **Task Management**: Easily add, edit, and delete tasks.
+- **Real-time Updates**: Leverages RxJava3 for reactive programming, ensuring real-time updates to your task list.
+- **Persistent Storage**: Utilizes Room for robust and efficient local database management.
+- **User-friendly Interface**: Clean and intuitive design for an enhanced user experience.
 
-implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+## Technologies Used
 
-implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+- **Java**: The core programming language used for developing the app.
+- **RxJava3**: For implementing reactive programming and managing asynchronous data streams.
+- **Room**: For local database management, providing an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.
 
-implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+## Getting Started
 
-implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+To get a local copy up and running, follow these simple steps:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/art3mvp/todo.git
